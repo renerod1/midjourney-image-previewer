@@ -15,7 +15,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/',
+  base: '/midjourney-image-previewer/',
   resolve: {
     alias: {
       // for TypeScript path alias import like : @/x/y/z
