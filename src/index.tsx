@@ -6,9 +6,9 @@ import {
   prerender as ssr,
 } from 'preact-iso'
 
-import { Header } from './components/Header.jsx'
-import { Home } from './pages/Home/index.jsx'
-import { NotFound } from './pages/_404.jsx'
+import { Header } from './components/Header'
+import { Home } from './pages/Home/index'
+import { NotFound } from './pages/_404'
 import './style.scss'
 
 export function App() {
