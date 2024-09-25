@@ -1,4 +1,5 @@
 import {
+  ErrorBoundary,
   LocationProvider,
   Router,
   Route,
@@ -16,10 +17,12 @@ export function App() {
     <LocationProvider>
       <Header />
       <main>
-        <Router>
-          <Route path='/' component={Home} />
-          <Route default component={NotFound} />
-        </Router>
+        <ErrorBoundary>
+          <Router>
+            <Route path='/' component={Home} />
+            <Route default component={NotFound} />
+          </Router>
+        </ErrorBoundary>
       </main>
     </LocationProvider>
   )
@@ -30,5 +33,19 @@ if (typeof window !== 'undefined') {
 }
 
 export async function prerender(data) {
-  return await ssr(<App {...data} />)
+  const { html, links } = await ssr(<App {...data} />)
+
+  return {
+    html,
+    links,
+    head: {
+      title: globalThis.title,
+      elements: new Set([
+        {
+          type: 'meta',
+          props: { property: 'og:title', content: globalThis.title },
+        },
+      ]),
+    },
+  }
 }
