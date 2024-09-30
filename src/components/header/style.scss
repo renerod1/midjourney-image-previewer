@@ -13,29 +13,28 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-}
-
-#app {
+header {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  justify-content: flex-end;
+  background-color: #673ab8;
 }
 
-main {
-  flex: auto;
+header nav {
   display: flex;
-  align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
 }
 
-@media (max-width: 639px) {
-  main {
-    margin: 2rem;
-  }
+header a {
+  color: #fff;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+
+header a.active {
+  background-color: #0005;
+}
+
+header a:hover {
+  background-color: #0008;
 }
 
 @media (prefers-color-scheme: dark) {
