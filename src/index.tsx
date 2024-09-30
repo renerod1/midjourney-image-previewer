@@ -7,23 +7,33 @@ import {
   prerender as ssr,
 } from 'preact-iso'
 
-import { Header } from './components/Header'
+import { Footer } from './components/footer'
+import { Header } from './components/header'
 import { Home } from './pages/Home/index'
+import { Layout } from 'antd'
+import { Midjourney } from './components/midjourney'
 import { NotFound } from './pages/_404'
+
 import './style.scss'
 
 export function App() {
   return (
     <LocationProvider>
-      <Header />
-      <main>
-        <ErrorBoundary>
-          <Router>
-            <Route path='/' component={Home} />
-            <Route default component={NotFound} />
-          </Router>
-        </ErrorBoundary>
-      </main>
+      <Layout>
+        <Header />
+        <Layout>
+          <Layout.Content>
+            <ErrorBoundary>
+              <Router>
+                <Route path='/' component={Home} />
+                <Route path='/midjourney' component={Midjourney} />
+                <Route default component={NotFound} />
+              </Router>
+            </ErrorBoundary>
+          </Layout.Content>
+        </Layout>
+        <Footer />
+      </Layout>
     </LocationProvider>
   )
 }
