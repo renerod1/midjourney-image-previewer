@@ -1,7 +1,7 @@
 {
-  "name": "preact-ts-vite-template",
+  "name": "midjourney-image-previewer",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "author": {
     "name": "Rene Rodriguez",
@@ -12,6 +12,7 @@
     "preact",
     "vite",
     "typescript",
+    "antd",
     "sqlite3"
   ],
   "scripts": {
