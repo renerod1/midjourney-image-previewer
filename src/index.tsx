@@ -25,8 +25,11 @@ export function App() {
           <Layout.Content>
             <ErrorBoundary>
               <Router>
-                <Route path='/' component={Home} />
-                <Route path='/midjourney' component={Midjourney} />
+                <Route path='/midjourney-image-previewer/' component={Home} />
+                <Route
+                  path='/midjourney-image-previewer/midjourney'
+                  component={Midjourney}
+                />
                 <Route default component={NotFound} />
               </Router>
             </ErrorBoundary>

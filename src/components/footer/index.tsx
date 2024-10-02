@@ -17,7 +17,10 @@ export function Footer() {
                 {
                   key: 'footer-home',
                   label: (
-                    <Typography.Link href='/' class={url == '/' && 'active'}>
+                    <Typography.Link
+                      href='/midjourney-image-previewer/'
+                      class={url == '/' && 'active'}
+                    >
                       Home
                     </Typography.Link>
                   ),
@@ -26,7 +29,7 @@ export function Footer() {
                   key: 'footer-midjourney',
                   label: (
                     <Typography.Link
-                      href='/midjourney'
+                      href='/midjourney-image-previewer/midjourney'
                       class={url == '/midjourney' && 'active'}
                     >
                       Midjourney

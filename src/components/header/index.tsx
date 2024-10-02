@@ -17,7 +17,10 @@ export function Header() {
                 {
                   key: 'header-home',
                   label: (
-                    <Typography.Link href='/' class={url == '/' && 'active'}>
+                    <Typography.Link
+                      href='/midjourney-image-previewer/'
+                      class={url == '/' && 'active'}
+                    >
                       Home
                     </Typography.Link>
                   ),
@@ -26,7 +29,7 @@ export function Header() {
                   key: 'header-midjourney',
                   label: (
                     <Typography.Link
-                      href='/midjourney'
+                      href='/midjourney-image-previewer/midjourney'
                       class={url == '/midjourney' && 'active'}
                     >
                       Midjourney
@@ -37,7 +40,7 @@ export function Header() {
                   key: 'header-404',
                   label: (
                     <Typography.Link
-                      href='/404'
+                      href='/midjourney-image-previewer/404'
                       class={url == '/404' && 'active'}
                     >
                       404

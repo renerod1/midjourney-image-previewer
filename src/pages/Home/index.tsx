@@ -12,7 +12,7 @@ export function Home() {
         <Col span={24}>
           <Typography.Link href='https://preactjs.com' target='_blank'>
             <Image
-              src='/src/assets/images/preact.svg'
+              src={preactLogo}
               alt='Preact logo'
               height='160px'
               width='160px'

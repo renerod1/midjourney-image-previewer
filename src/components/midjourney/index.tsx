@@ -1,4 +1,4 @@
-import { Button, Image, Input, Layout, Row, Space, Typography } from 'antd'
+import { Button, Image, Input, Row, Space, Typography } from 'antd'
 
 export function Midjourney() {
   return (
