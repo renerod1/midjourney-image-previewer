@@ -1,5 +1,4 @@
 import { useLocation } from 'preact-iso'
-import { Col, Layout, Menu, Row, Space, Typography } from 'antd'
 
 import './style.scss'
 
@@ -7,40 +6,18 @@ export function Footer() {
   const { url } = useLocation()
 
   return (
-    <Layout>
-      <Space direction='vertical'>
-        <Row gutter={16}>
-          <Col span={24}>
-            <Menu
-              mode='horizontal'
-              items={[
-                {
-                  key: 'footer-home',
-                  label: (
-                    <Typography.Link
-                      href='/midjourney-image-previewer/'
-                      class={url == '/' && 'active'}
-                    >
-                      Home
-                    </Typography.Link>
-                  ),
-                },
-                {
-                  key: 'footer-midjourney',
-                  label: (
-                    <Typography.Link
-                      href='/midjourney-image-previewer/midjourney'
-                      class={url == '/midjourney' && 'active'}
-                    >
-                      Midjourney
-                    </Typography.Link>
-                  ),
-                },
-              ]}
-            ></Menu>
-          </Col>
-        </Row>
-      </Space>
-    </Layout>
+    <footer>
+      <nav>
+        <a href='/midjourney-image-previewer/' class={url == '/' && 'active'}>
+          Home
+        </a>
+        <a
+          href='/midjourney-image-previewer/404'
+          class={url == '/404' && 'active'}
+        >
+          404
+        </a>
+      </nav>
+    </footer>
   )
 }
