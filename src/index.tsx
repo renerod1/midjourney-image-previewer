@@ -7,9 +7,9 @@ import {
   prerender as ssr,
 } from 'preact-iso'
 
-import { Footer } from './components/footer'
-import { Header } from './components/header'
-import { Home } from './pages/Home/index'
+import { Footer } from './shared/components/footer'
+import { Header } from './shared/components/header'
+import { Midjourney } from './midjourney/pages'
 import { NotFound } from './pages/_404'
 
 import './style.scss'
@@ -21,7 +21,11 @@ export function App() {
       <main>
         <ErrorBoundary>
           <Router>
-            <Route path='/midjourney-image-previewer/' component={Home} />
+            <Route path='/midjourney-image-previewer' component={Midjourney} />
+            <Route
+              path='/midjourney-image-previewer/midjourney'
+              component={Midjourney}
+            />
             <Route default component={NotFound} />
           </Router>
         </ErrorBoundary>
