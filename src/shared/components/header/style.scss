@@ -1,3 +1,6 @@
+// Import all of Bootstrap's CSS
+@import '~bootstrap/scss/bootstrap';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,27 +16,27 @@
   -webkit-text-size-adjust: 100%;
 }
 
-footer {
+header {
   display: flex;
   justify-content: flex-end;
   background-color: #673ab8;
 }
 
-footer nav {
+header nav {
   display: flex;
 }
 
-footer a {
+header a {
   color: #fff;
   padding: 0.75rem;
   text-decoration: none;
 }
 
-footer a.active {
+header a.active {
   background-color: #0005;
 }
 
-footer a:hover {
+header a:hover {
   background-color: #0008;
 }
 

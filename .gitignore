@@ -25,3 +25,8 @@ dist-ssr
 
 #
 eslint.config.js
+.env
+.env.development
+.env.local
+.env.production
+
