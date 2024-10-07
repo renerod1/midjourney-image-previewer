@@ -7,11 +7,15 @@ export const ImageCard = ({ batchNo, jobId }: IImageCard) => {
     'https://cdn.midjourney.com/' + jobId + '/0_' + (batchNo - 1) + '.png'
 
   return (
-    <div class='row'>
-      <div class='col-2 fw-bold'>Image {batchNo}:</div>
-      <div class='col'>{imageURL}</div>
-      <div class='col-2'>
-        <img src={imageURL} class='img-thumbnail' />
+    <div class='col'>
+      <div class='card'>
+        <div class='card-body'>
+          <img src={imageURL} class='img-thumbnail img-fluid' />
+          <h5 class='card-title'>Image {batchNo}:</h5>
+          <a class='card-text' href={imageURL} target='_blank'>
+            {imageURL}
+          </a>
+        </div>
       </div>
     </div>
   )
