@@ -1,11 +1,16 @@
-export const ImageCard = (props) => {
+interface IImageGrid {
+  jobId: string
+}
+export const ImageGrid = ({ jobId }: IImageGrid) => {
+  const imageURL = 'https://cdn.midjourney.com/' + jobId + '/grid_0' + '.png'
+
   return (
-    <section>
-      <div>
-        <h3>Image Grid</h3>
-        <div>{props.value}</div>
-        <img width={800} src={props.src} />
+    <div class='row'>
+      <div class='col-2 fw-bold'>Image Grid:</div>
+      <div class='col'>{imageURL}</div>
+      <div class='col-4'>
+        <img src={imageURL} class='img-thumbnail' />
       </div>
-    </section>
+    </div>
   )
 }
