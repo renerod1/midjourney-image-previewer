@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks'
-import { Callback, OnChange } from 'src/shared/types'
+import { Callback, OnInput } from 'src/shared/types'
 
 interface IInputButtonProps {
   disabled?: boolean
@@ -8,8 +8,8 @@ interface IInputButtonProps {
   placeholder: string
   text: string
   type: string
-  onChange: OnChange
   onClick: Callback
+  onInput: OnInput
 }
 
 export const InputButton = ({
@@ -19,8 +19,8 @@ export const InputButton = ({
   placeholder,
   text,
   type,
-  onChange,
   onClick,
+  onInput,
 }: IInputButtonProps) => {
   const [btnId, setBtnId] = useState('')
   const [btnType, setBtnType] = useState('')
@@ -35,7 +35,7 @@ export const InputButton = ({
         size={size}
         placeholder={placeholder}
         class='form-control'
-        onChange={onChange}
+        onInput={onInput}
       />
       <button
         disabled={disabled}
