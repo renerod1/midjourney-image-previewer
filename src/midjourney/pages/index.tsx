@@ -55,17 +55,20 @@ export const Midjourney = () => {
               />
             </div>
           </div>
+          <div class='row'>&nbsp;</div>
           {!isHidden && (
             <>
-              <ImageCard batchNo={1} jobId={jobId} />
-              <ImageCard batchNo={2} jobId={jobId} />
-              <ImageCard batchNo={3} jobId={jobId} />
-              <ImageCard batchNo={4} jobId={jobId} />
-              <ImageCard batchNo={5} jobId={jobId} />
+              <div class='row row-cols-4 g-4'>
+                <ImageCard batchNo={1} jobId={jobId} />
+                <ImageCard batchNo={2} jobId={jobId} />
+                <ImageCard batchNo={3} jobId={jobId} />
+                <ImageCard batchNo={4} jobId={jobId} />
+                {/* <ImageCard batchNo={5} jobId={jobId} />
               <ImageCard batchNo={6} jobId={jobId} />
               <ImageCard batchNo={7} jobId={jobId} />
-              <ImageCard batchNo={8} jobId={jobId} />
-              <ImageGrid jobId={jobId} />
+              <ImageCard batchNo={8} jobId={jobId} /> */}
+                <ImageGrid jobId={jobId} />
+              </div>
             </>
           )}
         </div>
