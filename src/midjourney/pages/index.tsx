@@ -20,10 +20,11 @@ export const Midjourney = () => {
           '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}',
         )[0],
       )
+      setIsHidden(false)
     } else {
       setJobId('')
+      setIsHidden(true)
     }
-    setIsHidden(jobId ? false : true)
   }
 
   const handleInputChange = (e) => {
@@ -38,6 +39,7 @@ export const Midjourney = () => {
           <div class='row'>
             <div class='col'>
               <h1>Midjourney Image Previewer</h1>
+              <p>&nbsp;</p>
             </div>
           </div>
         </div>
