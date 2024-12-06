@@ -65,11 +65,14 @@ export const Midjourney = () => {
                 <ImageCard batchNo={2} jobId={jobId} />
                 <ImageCard batchNo={3} jobId={jobId} />
                 <ImageCard batchNo={4} jobId={jobId} />
-                {/* <ImageCard batchNo={5} jobId={jobId} />
-              <ImageCard batchNo={6} jobId={jobId} />
-              <ImageCard batchNo={7} jobId={jobId} />
-              <ImageCard batchNo={8} jobId={jobId} /> */}
-                <ImageGrid jobId={jobId} />
+                <ImageCard batchNo={5} jobId={jobId} />
+                <ImageCard batchNo={6} jobId={jobId} />
+                <ImageCard batchNo={7} jobId={jobId} />
+                <ImageCard batchNo={8} jobId={jobId} />
+              </div>
+              <div class='row row-cols-4 g-4'>
+                <ImageGrid batchNo={1} jobId={jobId} />
+                <ImageGrid batchNo={2} jobId={jobId} />
               </div>
             </>
           )}
